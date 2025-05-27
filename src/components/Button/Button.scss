@@ -1,0 +1,60 @@
+.button__container {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+
+  &--small {
+    // padding, font-size etc.
+  }
+
+  &--medium {
+    // medium padding, font-size
+  }
+
+  &--large {
+    // large button size
+  }
+
+  &--primary {
+    // bg, color, border for primary
+  }
+
+  &--secondary {
+    // bg, color, border for secondary
+  }
+
+  &--minimal {
+    // flat/minimal style
+  }
+
+  &--icon-only {
+    padding: 0.5rem;
+    aspect-ratio: 1 / 1;
+    justify-content: center;
+
+    .button__label {
+      display: none;
+    }
+
+    .button__icon-left,
+    .button__icon-right {
+      margin: 0; // center the icon
+    }
+  }
+
+  &__icon-left {
+    margin-right: 0.5rem;
+    display: inline-flex;
+  }
+
+  &__icon-right {
+    margin-left: 0.5rem;
+    display: inline-flex;
+  }
+
+  &__label {
+    display: inline-block;
+  }
+}

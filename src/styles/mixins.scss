@@ -1,0 +1,73 @@
+@use "./vars.scss" as *;
+
+// flex mixin
+@mixin flex($FD: row, $AI: center, $JC: center, $Gap: 0px) {
+  display: flex;
+  align-items: $AI;
+  justify-content: $JC;
+  flex-direction: $FD;
+  gap: $Gap;
+}
+// text style mixin
+@mixin font($weight, $size, $line-height, $underline: false) {
+  font-family: $font-primary;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $line-height;
+  text-decoration: if($underline, underline, none);
+}
+
+// Headings
+@mixin h1-bold {
+  @include font(700, 40px, 52px);
+}
+@mixin h2-bold {
+  @include font(700, 24px, 21px);
+}
+@mixin h3-medium {
+  @include font(500, 18px, 27px);
+}
+@mixin h3-bold {
+  @include font(700, 18px, 27px);
+}
+
+// Body1
+@mixin body1-regular {
+  @include font(400, 18px, 28px);
+}
+@mixin body1-medium {
+  @include font(500, 18px, 28px);
+}
+@mixin body1-bold {
+  @include font(700, 18px, 28px);
+}
+
+// Body2
+@mixin body2-regular {
+  @include font(400, 16px, 24px);
+}
+@mixin body2-medium {
+  @include font(500, 16px, 24px);
+}
+@mixin body2-medium-underlined {
+  @include font(500, 16px, 24px, true);
+}
+@mixin body2-bold {
+  @include font(700, 16px, 24px);
+}
+
+// Caption
+@mixin caption-regular {
+  @include font(400, 14px, 20px);
+}
+@mixin caption-medium {
+  @include font(500, 14px, 20px);
+}
+@mixin caption-bold {
+  @include font(700, 14px, 20px);
+}
+
+// Small
+@mixin small-regular {
+  @include font(400, 12px, 18px);
+}
